@@ -1,0 +1,121 @@
+snippet if
+if ($1) {
+	$2
+}
+endsnippet
+
+snippet else
+else {
+	$1
+}
+endsnippet
+
+snippet die
+die($1);
+endsnippet
+
+snippet print_r
+print_r($1);
+endsnippet
+
+snippet array
+array($2)$1
+endsnippet
+
+snippet foreach
+foreach (${1:array_expression} as ${2:key} => ${3:value}) {
+	$4
+}
+endsnippet
+
+snippet switch
+switch (${1:condition}) {
+	case ${2:value}:
+		$3
+		break;
+}
+endsnippet
+
+snippet case
+case ${1:value}:
+	$2
+	break;
+endsnippet
+
+snippet default
+default:
+	$1
+	break;
+endsnippet
+
+snippet implode
+implode(${1:glue}, ${2:pieces});
+endsnippet
+
+snippet explode
+explode(${1:delimiter}, ${2:string});
+endsnippet
+
+snippet try
+try {
+	$1
+}
+catch (Exception $e) {
+	$2
+}
+endsnippet
+
+snippet fun
+/**
+ * $1
+ */
+function ${2:name}($3) {
+	$4
+}
+endsnippet
+
+snippet kv
+${1:key} => ${2:value}$3
+endsnippet
+
+snippet php
+<?php $1 ?>
+endsnippet
+
+snippet =
+=> $1
+endsnippet
+
+global !p
+def complete(t, opts):
+	if t:
+		opts = [ m[len(t):] for m in opts if m.startswith(t) ]
+
+	if len(opts) == 1:
+		return opts[0]
+
+	return '|'.join(opts)
+endglobal
+
+snippet syslog "syslog" b
+syslog($1`!p snip.rv=complete(t[1], ['LOG_EMERG','LOG_ALERT','LOG_CRIT','LOG_ERR','LOG_WARNING','LOG_NOTICE','LOG_INFO','LOG_DEBUG'])`, $2);
+endsnippet
+
+snippet str_replace
+str_replace(${1:search}, ${2:replace}, ${3:subject}, ${4:count});
+endsnippet
+
+snippet in_array
+in_array(${1:needle}, ${2:haystack}, ${3:strict});
+endsnippet
+
+snippet def
+define($1, $2);
+endsnippet
+
+snippet @file
+/**
+ * @file
+ * $1
+ */
+endsnippet

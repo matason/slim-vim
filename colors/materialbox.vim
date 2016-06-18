@@ -1,1 +1,0 @@
-materialbox/colors/materialbox.vim

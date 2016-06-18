@@ -1,0 +1,27 @@
+snippet play
+(play ${1:instrument} ${2:gain} ${3:duration})
+endsnippet
+
+snippet proc
+(define ${1:name}
+	(lambda (beat dur)
+		$2
+		(callback (*metro* (+ beat (* .5 dur))) '$1 (+ beat dur) dur)))
+($1 (*metro* 'get-beat 4) 1/4)
+endsnippet
+
+snippet metro
+(define *metro* (make-metro ${1:bpm}))
+endsnippet
+
+snippet define
+(define ${1:key} ${2:value})
+endsnippet
+
+snippet case
+(case (${1:key}) ((${2:object}) ${3:expression}))
+endsnippet
+
+snippet cosr
+(cosr ${1:baseline} ${2:down} ${3:up})
+endsnippet

@@ -86,7 +86,7 @@ let g:netrw_liststyle = 3
 "let g:ag_prg='ag -S --nocolor --nogroup --column --ignore="./tags"'
 
 " Includes.
-source ~/.vim/indent-two-spaces.vim
+source ~/.vim/indent-spaces-two.vim
 source ~/.vim/mappings.vim
 source ~/.vim/hardcore.vim
 source ~/.vim/experimental.vim

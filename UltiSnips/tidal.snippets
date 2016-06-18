@@ -1,0 +1,103 @@
+snippet bps
+bps (${1:240}/120)
+endsnippet
+
+snippet d
+d${1:1} $ $0
+endsnippet
+
+snippet sound
+sound "$1"
+endsnippet
+
+snippet samples
+sound (samples "$2" $3)
+endsnippet
+
+snippet density
+density ${1:2}
+endsnippet
+
+snippet gain
+gain "${1:1}"
+endsnippet
+
+snippet speed
+speed "${1:1}"
+endsnippet
+
+snippet accelerate
+accelerate "${1:1}"
+endsnippet
+
+snippet unit
+unit "c"
+endsnippet
+
+snippet delay
+delay "${1:1}"
+endsnippet
+
+snippet run
+(run $1)
+endsnippet
+
+snippet irand
+(irand $1)
+endsnippet
+
+snippet every
+every $1 ($2)
+endsnippet
+
+snippet foldEvery
+foldEvery [$1] ($2)
+endsnippet
+
+snippet stack
+d${1:1} $ stack [
+	$2
+]
+endsnippet
+
+snippet cat
+d${1:1} $ cat [
+	$2
+]
+endsnippet
+
+snippet slowcat
+d${1:1} $ slowcat [
+	$2
+]
+endsnippet
+
+snippet randcat
+d${1:1} $ randcat [
+	$2
+]
+endsnippet
+
+snippet silence
+d${1:1} silence
+endsnippet
+
+snippet =
+|=| $0
+endsnippet
+
+snippet +
+|+| $0
+endsnippet
+
+snippet -
+|-| $0
+endsnippet
+
+snippet /
+|/| $0
+endsnippet
+
+snippet *
+|*| $0
+endsnippet

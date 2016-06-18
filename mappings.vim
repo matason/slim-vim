@@ -14,4 +14,4 @@ nnoremap <leader>v V`]
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 " Clear search highlights with a carriage return.
-nnoremap <CR> :nohlsearch<cr>
+nnoremap <CR> :nohlsearch<CR>

@@ -23,7 +23,7 @@ array($2)$1
 endsnippet
 
 snippet foreach
-foreach (${1:array_expression} as ${2:key} => ${3:value}) {
+foreach (${1:array_expression} as $${2:key} => $${3:value}) {
 	$4
 }
 endsnippet
@@ -60,7 +60,7 @@ snippet try
 try {
 	$1
 }
-catch (Exception $e) {
+catch (Exception $exception) {
 	$2
 }
 endsnippet
@@ -116,6 +116,10 @@ endsnippet
 snippet @file
 /**
  * @file
- * $1
+ * ${1: Documentation for the file as a whole.}
  */
+endsnippet
+
+snippet <?
+<?php $1 ?>
 endsnippet

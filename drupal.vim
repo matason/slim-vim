@@ -9,4 +9,5 @@ augroup drupal
   autocmd BufRead,BufNewFile *.engine set filetype=php
   autocmd BufRead,BufNewFile *.profile set filetype=php
   autocmd BufRead,BufNewFile *.test set filetype=php
+  autocmd BufRead,BufNewFile *.tpl.php set filetype=html
 augroup END

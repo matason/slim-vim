@@ -10,7 +10,7 @@ map <A-D-Left> :tabprevious<CR>
 map <A-D-Right> :tabnext<CR>
 
 function! FontNormal()
-  set guifont=Monaco:h12
+  set guifont=Monaco:h14
 endfunction
 
 function! FontBig()
